@@ -1,0 +1,161 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage{url}
+\usepackage{parskip} 	
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.914]{geometry}
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{1em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+\usepackage{fontawesome5}
+
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=5pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+\begin{document}
+
+\pagestyle{empty} 
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Shirley Katherine Maldonado} \\[3pt]
+{Data Analyst $|$ Data Scientist}\\[2pt]
+\href{https://www.linkedin.com/in/katherine-maldonado-64424b205/}{\raisebox{-0.05\height}\faLinkedin\ Shirley Maldonado} \ $|$ \ 
+\href{mailto:kathe.meza.27@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ kathe.meza.27@gmail.com} \ $|$ \ 
+\href{tel:+57 3209593820}{\raisebox{-0.05\height}\faMobile \ +57 3209593820}\ $|$ \ \href{tel:+57 3209593820}{\raisebox{-0.05\height}\faMobile \ +57 3249176840} \\
+\end{tabularx}
+
+\section{Profile}
+Data analyst and data scientist with a background in Astronomy, hands-on experience in the retail sector, and C1-level English proficiency. I work primarily in Python, R, SQL, and Excel for data extraction, transformation, and modeling, and in Power BI to communicate results to business audiences. My approach combines statistical rigor with the ability to translate technical findings into actionable decisions.
+\href{https://kikikath.github.io/Hoja-de-Vida/cv.pdf}{Download link}
+
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Programming:  &  \normalsize{Python, R, SQL.}\\
+Databases:    &  \normalsize{MySQL, SAS.}\\
+Visualization: &  \normalsize{Power BI, Matplotlib, Seaborn, Qualtrics.}\\
+Libraries:    &  \normalsize{Pandas, NumPy, scikit-learn, TensorFlow, Keras, Matplotlib, Seaborn.}\\
+Machine Learning: &  \normalsize{Histogram Gradient Boosting, Regression, Classification, Decision Trees, SHAP values, permutation importance for interpretability.}\\  
+Statistical Methods: &  \normalsize{PCA, Multiple Correspondence Analysis (MCA), causal discovery.}\\
+\end{tabularx}
+
+\section{Work Experience}
+
+\begin{joblong}{Market Research \& Data Science Intern}{Grupo Éxito}
+
+\item Developed an omnichannel NPS predictive model using Gradient Boosting (R² between 0.63 and 0.79 on the test set), identifying on-time product delivery as the primary driver of customer satisfaction and loyalty. Results were presented to the team and adopted as an operational prioritization framework.
+\item Optimized the customer experience survey through PCA and correlation analysis, identifying redundant or low-variance items (such as available payment methods and staff knowledge) whose removal reduces response burden without loss of explanatory power (variance explained by Moment of Truth: $75$--$85\%$).
+\item Designed a brand reputation analysis using ordinal logistic regression (instead of the standard permutation importance approach) to quantify the impact of each variable on consumer trust. This methodological choice, proposed by me and validated by the team, yielded directly interpretable weights that were aggregated at the driver level and translated into a performance-vs.-impact chart consistent across audiences and levels of analysis.
+\item Analyzed Nielsen data for competitive benchmarking and supported the Data Science team in brand perception metrics.
+\end{joblong}
+  
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Time Series Analysis and Electricity Price Forecasting} & \hfill \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Academic team project in which we processed historical data from XM and built LSTM models in TensorFlow/Keras to forecast the kWh price in the short and medium term.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Database Design for Disaster Risk Management in Antioquia} & \hfill \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Capstone project of the Betek Data Analytics Bootcamp, presented at the company's Open House to an external audience. I designed the relational model in MySQL, conducted exploratory data analysis in Python, and built a Power BI dashboard covering the historical record of disasters and risk zones in the department of Antioquia.}  \\
+\end{tabularx}
+
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{} l@{}}	
+Mar 2019 -- Mar 2026 & B.Sc. in Astronomy & \textbf{Universidad de Antioquia} \hfill \normalsize \\
+\end{tabularx}
+
+\section{Continuing Education}
+\begin{tabularx}{\linewidth}{@{}l X@{} l@{}}
+
+Oct 2024 -- Dec 2024 & Power BI and Data Visualization Course & 
+\textbf{Universidad de Antioquia} \hfill \normalsize \\
+
+Nov 2023 -- May 2024 & Data Analytics Bootcamp & \textbf{Betek} \hfill \normalsize \\
+
+Nov 2023 -- Feb 2024 & Diploma in Data Analysis and Machine Learning with Python & \textbf{Universidad de Antioquia} \hfill \normalsize \\
+
+Nov 2022 -- Dec 2022 & Fundamentals of Data Analytics & \textbf{DS4A} \hfill \normalsize \\
+\end{tabularx}
+
+\center{\footnotesize Last updated: \today}
+
+\end{document}
